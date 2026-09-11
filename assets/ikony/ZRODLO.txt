@@ -1,0 +1,2 @@
+Ikony: Lucide (lucide-static@1.44.0), licencja ISC, https://lucide.dev
+shield-check.svg i phone-call.svg (2026-09-11): złożone ręcznie z kształtów Lucide 1.44.0 (phone-call = phone + dwa łuki), bez zmian geometrii.
