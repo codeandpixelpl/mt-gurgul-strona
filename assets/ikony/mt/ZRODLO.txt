@@ -1,0 +1,2 @@
+Ikony MT Gurgul przygotowane dla tego projektu (2026-09-11) i zwektoryzowane.
+Kolory ustawia CSS: klasa ik-ciem to grafit, klasa ik-czer to czerwień.
