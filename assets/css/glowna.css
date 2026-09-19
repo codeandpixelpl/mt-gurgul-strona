@@ -211,13 +211,25 @@ body.menu-otwarte .nav{ display:block; }
   .kroki li:last-child:nth-child(odd){ grid-column:1 / -1; } }
 @media (min-width:1024px){ .kroki li{ gap:18px; padding:36px 40px 40px; font-size:18px; } .kroki li::before{ font-size:42px; } }
 
-/* rozwiązania warte uwagi */
-.wazne{ display:grid; gap:20px; }
-@media (min-width:900px){ .wazne{ grid-template-columns:repeat(3,1fr); } }
+/* rozwiązania warte uwagi: 7 kart w pasie przewijanym w bok (runda 02, 2026-09-19). Dotyk: palcem, z przyciąganiem;
+   od 900 px dochodzą strzałki przy nagłówku (main.js), widać trzy karty i skrawek czwartej. */
+.wazne{ list-style:none; margin:0 calc(-1 * var(--pad)); padding:6px var(--pad) 14px; display:grid; grid-auto-flow:column;
+  grid-auto-columns:min(84%, 340px); gap:20px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding:0 var(--pad);
+  scrollbar-width:none; overscroll-behavior-x:contain; }
+.wazne::-webkit-scrollbar{ display:none; }
+@media (min-width:900px){ .wazne{ grid-auto-columns:calc((100% - 2 * var(--pad) - 40px) / 3.15); scroll-behavior:smooth; } }
+.wazne__strzalki{ display:none; gap:10px; margin-left:auto; }
+@media (min-width:900px){ .wazne__strzalki{ display:flex; } }
+.wazne__strz{ display:grid; place-items:center; width:48px; height:48px; padding:0; border:1.5px solid var(--linia); border-radius:50%;
+  background:#fff; cursor:pointer; transition:border-color .15s, opacity .15s; }
+.wazne__strz .ikona{ width:20px; height:20px; stroke-width:2; }
+.wazne__strz:hover:not(:disabled){ border-color:var(--czerwien); }
+.wazne__strz:disabled{ opacity:.35; cursor:default; }
 .wazne__karta{ display:flex; flex-direction:column; background:#fff; border:1px solid var(--linia); border-radius:var(--r-l); overflow:hidden;
-  transition:box-shadow .25s, transform .25s; }
+  scroll-snap-align:start; transition:box-shadow .25s, transform .25s; }
+.blok-brak.wazne-brak{ margin:0 0 20px; max-width:none; border-color:#D9DBE0; }
 .wazne__karta:hover{ box-shadow:var(--cien); transform:translateY(-3px); }
-.wazne__foto{ margin:0; overflow:hidden; }
+.wazne__foto{ position:relative; margin:0; overflow:hidden; } /* etykieta .ph__label jest absolutna: bez tego karty schowane w pasie rozpychały stronę w bok */
 .wazne__foto img{ width:100%; aspect-ratio:5/3; object-fit:cover; transition:transform .5s; }
 .wazne__karta:hover .wazne__foto img{ transform:scale(1.03); }
 .wazne__tresc{ display:flex; flex-direction:column; flex:1; padding:26px 28px 8px; }

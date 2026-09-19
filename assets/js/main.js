@@ -126,4 +126,27 @@
     });
     pokaz(taby[0]);
   });
+
+  // pas kart przewijany w bok (Rozwiązania warte uwagi): strzałki przesuwają o jedną kartę,
+  // wyłączają się na końcach; dotyk przewija palcem bez JS
+  document.querySelectorAll('[data-przewijane]').forEach(function (pas) {
+    var sek = pas.closest('section');
+    var strz = sek ? sek.querySelectorAll('[data-przewin]') : [];
+    if (!strz.length) return;
+    function krok() {
+      var k = pas.firstElementChild;
+      return k ? k.getBoundingClientRect().width + parseFloat(getComputedStyle(pas).columnGap || 0) : pas.clientWidth;
+    }
+    function stan() {
+      var max = pas.scrollWidth - pas.clientWidth - 2;
+      strz[0].disabled = pas.scrollLeft <= 2;
+      strz[1].disabled = pas.scrollLeft >= max;
+    }
+    strz.forEach(function (b) {
+      b.addEventListener('click', function () { pas.scrollBy({ left: krok() * Number(b.getAttribute('data-przewin')) }); });
+    });
+    pas.addEventListener('scroll', stan, { passive: true });
+    window.addEventListener('resize', stan);
+    stan();
+  });
 })();

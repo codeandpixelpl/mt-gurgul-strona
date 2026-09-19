@@ -1,7 +1,7 @@
 # MT Gurgul Ubezpieczenia i Finansowanie: prototyp strony
 
 Statyczny prototyp nowej strony MT Gurgul z biurami w Brzesku i Szczurowej. To robocza wersja projektu
-graficznego po pierwszej rundzie uwag klienta (18 września 2026), przygotowana przez PROUP Studio
+graficznego po drugiej rundzie uwag klienta (19 września 2026), przygotowana przez PROUP Studio
 dla Code&Pixel.
 
 Strona składa się z plików HTML, CSS i JavaScript. Nie wymaga budowania ani instalowania zależności.
@@ -55,6 +55,17 @@ Adresy plików CSS i JS mają dopisek `?v=` ze skrótem zawartości pliku. Przeg
 wersję po każdej zmianie.
 
 ## Uwagi do wdrożenia
+
+### Zmiany po drugiej rundzie uwag (19 września 2026)
+
+- Strona główna, „Rozwiązania warte uwagi”: 7 kart w pasie przewijanym w bok (na dotyku palcem, od 900 px
+  także strzałkami, `data-przewijane` w `main.js`). Karty „Indywidualne ubezpieczenie grupowe”, „Prywatna
+  opieka lekarska”, „Posag” i „Ubezpieczenie na życie” mają zdjęcia poglądowe z innych podstron i czekają
+  na opisy z materiałów klienta.
+- Strona główna: w kafelku i w karcie „Leasing” zamiast „Finansowanie”, z przejściem do opisu leasingu
+  na stronie Finansowanie (`#leasing-operacyjny`).
+- Strona główna, hero: drugi przycisk „Kup polisę online”, prowadzi do sekcji sklepu Generali (`#kup-online`).
+- Strona główna: nagłówek „Dlaczego Ubezpieczenia Mateusz Gurgul”.
 
 ### Zmiany po pierwszej rundzie uwag (18 września 2026)
 
