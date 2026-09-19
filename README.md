@@ -60,8 +60,11 @@ wersję po każdej zmianie.
 
 - Strona główna, „Rozwiązania warte uwagi”: 7 kart w pasie przewijanym w bok (na dotyku palcem, od 900 px
   także strzałkami, `data-przewijane` w `main.js`). Karty „Indywidualne ubezpieczenie grupowe”, „Prywatna
-  opieka lekarska”, „Posag” i „Ubezpieczenie na życie” mają zdjęcia poglądowe z innych podstron i czekają
-  na opisy z materiałów klienta.
+  opieka lekarska”, „Posag” i „Ubezpieczenie na życie” są nowe.
+- Opisy tych czterech kart napisaliśmy my, są do akceptacji klienta albo podmiany na jego treść.
+  Zdjęcia wszystkich siedmiu kart (`assets/img/rozwiazania/`) są wygenerowane, do akceptacji klienta.
+- Stopka: „© 2026 Ubezpieczenia Mateusz Gurgul”.
+- Hero strony głównej bez czerwonej kreski nad nagłówkiem.
 - Strona główna: w kafelku i w karcie „Leasing” zamiast „Finansowanie”, z przejściem do opisu leasingu
   na stronie Finansowanie (`#leasing-operacyjny`).
 - Strona główna, hero: drugi przycisk „Kup polisę online”, prowadzi do sekcji sklepu Generali (`#kup-online`).

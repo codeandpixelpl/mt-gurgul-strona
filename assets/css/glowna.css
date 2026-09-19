@@ -117,8 +117,6 @@ body.menu-otwarte .nav{ display:block; }
 .hero__karta{ position:relative; overflow:hidden; border-radius:var(--r-l); background:var(--hero); }
 .hero__tekst{ position:relative; z-index:2; padding:44px 24px 32px; max-width:640px; }
 /* kreska nad nagłówkiem tylko od 1024 px: na telefonie zabierała 31 px nad h1 (Grzegorz, 2026-09-11) */
-.hero__kreska{ display:none; width:40px; height:3px; background:var(--czerwien); margin-bottom:28px; }
-@media (min-width:1024px){ .hero__kreska{ display:block; } }
 .h1-akcent{ color:var(--czerwien); }
 .hero__lead{ font-size:17px; color:var(--tekst2); max-width:540px; }
 .hero__lead:first-of-type{ color:var(--tusz); font-weight:500; }
