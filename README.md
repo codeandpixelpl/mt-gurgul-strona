@@ -47,6 +47,7 @@ assets/css/glowna.css     wygląd wspólny: kolory, typografia, nagłówek, stop
 assets/css/podstrony.css  komponenty podstron, ładowany na wszystkich stronach poza główną
 assets/js/main.js         menu, okno „Zadzwoń”, formularz, mapa, zakładki
 assets/img/               zdjęcia i grafiki
+assets/img/mail/          logo do stopki mailowej, ładowane z tego adresu, nie usuwać
 assets/ikony/             informacje o pochodzeniu i licencji ikon
 ```
 
@@ -64,7 +65,9 @@ wersję po każdej zmianie.
   opinii podpięty do wizytówki Google (np. Trustindex albo Elfsight). Link do wizytówki dostarczy klient.
 - Strona główna, pas kontaktu: miejsce na portret Mateusza Gurgula (`.kontakt-portret`), czeka
   na zdjęcie od klienta.
-- Stopka na wszystkich stronach: pod logo nazwa „Ubezpieczenia Mateusz Gurgul”.
+- Logo: od 19 września 2026 znak „MG Mateusz Gurgul Ubezpieczenia” (`assets/img/logo-mg.svg`, w stopce
+  `logo-mg-negatyw.svg`). Wektory odtworzone z grafiki od klienta. Nazwa firmy jest w samym logu, więc stopka
+  nie powtarza jej pod spodem.
 
 ### Formularz i interakcje
 
