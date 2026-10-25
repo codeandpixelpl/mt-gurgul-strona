@@ -1,0 +1,49 @@
+name: Publikacja GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publikacja na gałęzi gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Przygotuj pliki strony
+        run: |
+          mkdir -p "$RUNNER_TEMP/site"
+          cp ./*.html "$RUNNER_TEMP/site/"
+          cp -R ./assets "$RUNNER_TEMP/site/assets"
+          touch "$RUNNER_TEMP/site/.nojekyll"
+
+      - name: Opublikuj gałąź gh-pages
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add -B gh-pages "$RUNNER_TEMP/gh-pages" origin/gh-pages
+          rsync -a --delete --exclude='.git' "$RUNNER_TEMP/site/" "$RUNNER_TEMP/gh-pages/"
+          cd "$RUNNER_TEMP/gh-pages"
+          git add --all
+          if git diff --cached --quiet; then
+            echo "Brak zmian do opublikowania."
+            exit 0
+          fi
+          git commit -m "pages: publikacja ${SOURCE_SHA::7}"
+          git push --force-with-lease origin gh-pages
