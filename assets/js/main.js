@@ -149,4 +149,36 @@
     window.addEventListener('resize', stan);
     stan();
   });
+  // Preferencje prywatności. Integracje opcjonalne powinny sprawdzać kategorię przed uruchomieniem.
+  var cookieKey = 'mtgurgul_cookie_preferences_v1';
+  function readCookiePrefs() { try { return JSON.parse(localStorage.getItem(cookieKey)); } catch (e) { return null; } }
+  function saveCookiePrefs(prefs) {
+    var value = { necessary:true, functional:!!prefs.functional, analytics:!!prefs.analytics, marketing:!!prefs.marketing, updatedAt:new Date().toISOString() };
+    try { localStorage.setItem(cookieKey, JSON.stringify(value)); } catch (e) {}
+    window.dispatchEvent(new CustomEvent('mtgurgul:cookie-consent', { detail:value }));
+    var banner = document.querySelector('.cookie-banner'); if (banner) banner.hidden = true;
+    return value;
+  }
+  function allCookiePrefs(on) { return { functional:on, analytics:on, marketing:on }; }
+  var settings = document.querySelector('[data-cookie-settings]');
+  if (settings) {
+    var current = readCookiePrefs() || allCookiePrefs(false), status = settings.querySelector('.cookie-status');
+    ['functional','analytics','marketing'].forEach(function (name) { settings.elements[name].checked = !!current[name]; });
+    function updateSettings(prefs, message) {
+      prefs = saveCookiePrefs(prefs);
+      ['functional','analytics','marketing'].forEach(function (name) { settings.elements[name].checked = !!prefs[name]; });
+      status.textContent = message;
+    }
+    settings.addEventListener('submit', function (e) { e.preventDefault(); updateSettings({ functional:settings.elements.functional.checked, analytics:settings.elements.analytics.checked, marketing:settings.elements.marketing.checked }, 'Ustawienia zostały zapisane.'); });
+    settings.querySelector('[data-cookie-reject]').addEventListener('click', function () { updateSettings(allCookiePrefs(false), 'Opcjonalne kategorie zostały wyłączone.'); });
+    settings.querySelector('[data-cookie-accept]').addEventListener('click', function () { updateSettings(allCookiePrefs(true), 'Wszystkie kategorie zostały zaakceptowane.'); });
+  }
+  if (!readCookiePrefs()) {
+    var banner = document.createElement('aside');
+    banner.className = 'cookie-banner'; banner.setAttribute('aria-labelledby','cookie-banner-title');
+    banner.innerHTML = '<h2 id="cookie-banner-title">Twoja prywatność</h2><p>Używamy niezbędnych technologii do działania strony. Opcjonalne funkcje uruchomimy po Twojej zgodzie. Wybór możesz później zmienić.</p><div class="cookie-banner__actions"><button class="btn btn--2" type="button" data-banner-reject>Tylko niezbędne</button><a class="btn btn--2" href="ustawienia-cookies.html">Dostosuj</a><button class="btn btn--1" type="button" data-banner-accept>Akceptuję wszystkie</button></div>';
+    document.body.appendChild(banner);
+    banner.querySelector('[data-banner-reject]').addEventListener('click', function () { saveCookiePrefs(allCookiePrefs(false)); });
+    banner.querySelector('[data-banner-accept]').addEventListener('click', function () { saveCookiePrefs(allCookiePrefs(true)); });
+  }
 })();

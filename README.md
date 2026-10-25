@@ -56,6 +56,13 @@ wersję po każdej zmianie.
 
 ## Uwagi do wdrożenia
 
+### Aktualizacja nazw wskazana przez klienta
+
+- W menu i stopce etykieta „Finansowanie” została zmieniona na „Leasing”.
+- Na stronie głównej komunikacja „finansowanie” została zmieniona na „leasing”.
+- W sekcji „Rozwiązania warte uwagi” karta „Leczenie za granicą” została zmieniona na „Rak” z hasłem „Dostęp do światowej medycyny”.
+- Karta „Posag” została zmieniona na „Przyszłość dla Twojego dziecka”.
+
 ### Zmiany po drugiej rundzie uwag (19 września 2026)
 
 - Strona główna, „Rozwiązania warte uwagi”: 7 kart w pasie przewijanym w bok (na dotyku palcem, od 900 px
