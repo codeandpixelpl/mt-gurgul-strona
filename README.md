@@ -121,7 +121,7 @@ Liczby dotyczą miejsc na stronach. Ten sam plik bywa użyty w kilku miejscach.
 Pola z przerywaną ramką i opisem „czeka na” oznaczają treść, której klient jeszcze nie dostarczył.
 Stan na 11 września 2026:
 
-- Kontakt: adres e-mail i godziny pracy obu placówek, lista obsługiwanych miejscowości, opinie
+- Kontakt: adres e-mail, lista obsługiwanych miejscowości, opinie
   i wskazówki dojazdu, treść zgody pod formularzem ustalona po analizie prawnej.
 - O nas: imiona, role i specjalizacje doradców, liczba osób w zespole, lista partnerów.
 - Pomoc: pliki dokumentów z opisami, formatami i datami weryfikacji.
