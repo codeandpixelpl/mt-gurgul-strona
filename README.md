@@ -27,6 +27,7 @@ Potem otwórz w przeglądarce `http://localhost:8000/`.
 | `dom-i-mieszkanie.html` | Ubezpieczenie domu i mieszkania |
 | `zycie-i-zdrowie.html` | Ubezpieczenia życia i zdrowia |
 | `leczenie-za-granica.html` | Ubezpieczenie Leczenie za granicą |
+| `ubezpieczenie-grupowe.html` | Grupowe ubezpieczenie dla firm i dla Ciebie |
 | `turystyczne.html` | Ubezpieczenia turystyczne i NNW |
 | `rolnictwo.html` | Rolnictwo |
 | `finansowanie.html` | Leasing i finansowanie pojazdów |
@@ -42,7 +43,7 @@ Biura nie mają osobnych podstron. Menu prowadzi do sekcji `kontakt.html#brzesko
 ## Struktura katalogów
 
 ```
-*.html                    strony (23 pliki)
+*.html                    strony (29 plików)
 assets/css/glowna.css     wygląd wspólny: kolory, typografia, nagłówek, stopka, przyciski
 assets/css/podstrony.css  komponenty podstron, ładowany na wszystkich stronach poza główną
 assets/js/main.js         menu, okno „Zadzwoń”, formularz, mapa, zakładki
@@ -62,6 +63,9 @@ wersję po każdej zmianie.
 - Na stronie głównej komunikacja „finansowanie” została zmieniona na „leasing”.
 - W sekcji „Rozwiązania warte uwagi” karta „Leczenie za granicą” została zmieniona na „Rak” z hasłem „Dostęp do światowej medycyny”.
 - Karta „Posag” została zmieniona na „Przyszłość dla Twojego dziecka”.
+- Menu „Ubezpieczenia” zawiera dziewięć pozycji w kolejności zaakceptowanej przez klienta.
+- Dodano pełną podstronę „Grupowe ubezpieczenie dla firm i dla Ciebie”.
+- GAP pozostaje osobną podstroną i został dodatkowo powiązany z ofertą leasingu.
 
 ### Zmiany po drugiej rundzie uwag (19 września 2026)
 
@@ -117,7 +121,6 @@ Liczby dotyczą miejsc na stronach. Ten sam plik bywa użyty w kilku miejscach.
 Pola z przerywaną ramką i opisem „czeka na” oznaczają treść, której klient jeszcze nie dostarczył.
 Stan na 11 września 2026:
 
-- Wszystkie strony: dane formalne firmy i wymagane informacje pośrednika ubezpieczeniowego w stopce.
 - Kontakt: adres e-mail i godziny pracy obu placówek, lista obsługiwanych miejscowości, opinie
   i wskazówki dojazdu, treść zgody pod formularzem ustalona po analizie prawnej.
 - O nas: imiona, role i specjalizacje doradców, liczba osób w zespole, lista partnerów.
@@ -137,8 +140,7 @@ Stan na 11 września 2026:
 
 - Zakup online prowadzi do sklepów Uniqa i Generali przez linki partnerskie MT Gurgul. Przy wdrożeniu
   trzeba je przenieść bez zmian.
-- Promocja z kodem SZKOLNE10 trwa do 30 września 2026 r. Po tej dacie kartę promocji trzeba zdjąć
-  albo podmienić na aktualną.
+- Kod promocyjny SZKOLNE10 jest prezentowany bez daty zakończenia zgodnie z aktualną informacją klienta.
 
 ### Licencje
 
