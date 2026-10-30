@@ -405,3 +405,361 @@
 @media (prefers-reduced-motion:reduce){
   .page-info *{ scroll-behavior:auto!important; }
 }
+
+/* ================================================================
+   Wierne odwzorowanie środków dwóch infografik przekazanych przez klienta
+   ================================================================ */
+.page-group main>section:nth-of-type(n+4),
+.page-cancer main>section:nth-of-type(n+3){ display:none; }
+
+.info-sheet{ padding:18px 0 42px; }
+.info-sheet .wrap{ max-width:1320px; }
+.info-sheet h2,.info-sheet h3,.info-sheet p{ margin-top:0; }
+.info-sheet h2::before,.info-sheet h3::before{ content:none!important; }
+.info-sheet small{ font-size:.88em; font-weight:400; }
+
+/* Grupowe ubezpieczenie — plansza 1–7 */
+.info-sheet--group{ background:#fff; color:#082f68; }
+.group-row{ display:grid; gap:12px; margin-bottom:12px; }
+.group-panel{
+  overflow:hidden;
+  padding:26px 24px;
+  border-radius:22px;
+  color:#082f68;
+}
+.group-panel h2{
+  margin:0 0 22px;
+  color:#082f68;
+  font:700 clamp(22px,2vw,31px)/1.08 var(--f-naglowki);
+  letter-spacing:-.025em;
+}
+.group-panel h2 span{ color:currentColor; }
+.group-panel p{ margin-bottom:16px; color:#274d7e; }
+.group-panel--period{ background:linear-gradient(145deg,#eaf8ff,#f5fbff); }
+.group-panel--who{ background:linear-gradient(145deg,#fffbe9,#fffdf5); }
+.group-panel--scope{ background:linear-gradient(145deg,#fff0f6,#fff8fb); }
+.group-panel--variants{ background:linear-gradient(145deg,#eafbf5,#f5fffb); }
+.group-panel--addons{ background:linear-gradient(145deg,#e9f8ff,#f4fbff); }
+.group-panel--age{ background:linear-gradient(145deg,#f0f2ff,#f8f9ff); }
+.group-panel--premium{ background:linear-gradient(145deg,#fff0f5,#fff7fa); }
+.group-panel--period h2 span{ color:#0576bd; }
+.group-panel--who h2 span{ color:#11924d; }
+.group-panel--scope h2,.group-panel--scope h2 span{ color:#9f174e; }
+.group-panel--premium h2,.group-panel--premium h2 span{ color:#9f174e; }
+
+.info-ticks,.group-scope{ display:grid; gap:14px; margin:0; padding:0; list-style:none; }
+.info-ticks li,.group-scope li{ position:relative; min-height:28px; padding-left:44px; font-size:17px; line-height:1.35; }
+.info-ticks li::before,.group-scope li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:-2px;
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#0879bd;
+  color:#fff;
+  font-weight:800;
+}
+.group-panel--who .info-ticks li::before{ background:#16994f; }
+.group-panel--premium .info-ticks li::before{ background:#ff2468; }
+.group-scope li::before{ background:#ff4b78; }
+.group-scope li:nth-child(2)::before{ content:"+"; background:#ff647d; }
+.group-scope li:nth-child(3)::before{ content:"♡"; background:#ff4b78; }
+.group-scope li:nth-child(4)::before{ content:"●"; background:#2583c4; }
+.group-scope li:nth-child(5)::before{ content:"+"; background:#2d91cf; }
+
+.group-variants{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px 8px; }
+.group-variants>div{
+  display:flex;
+  min-width:0;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.variant-symbol{
+  width:70px;
+  height:70px;
+  display:grid;
+  place-items:center;
+  margin-bottom:10px;
+  border-radius:50%;
+  background:#fff;
+  color:#102e80;
+  font:700 18px/1 var(--f-naglowki);
+  box-shadow:0 7px 20px rgba(18,62,111,.08);
+}
+.group-variants strong{ min-height:42px; font-size:16px; line-height:1.15; }
+.group-variants small{ display:block; margin-top:4px; line-height:1.2; }
+.variant-company .variant-symbol{ color:#e4236d; }
+
+.group-addons{ display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
+.group-addons span{
+  position:relative;
+  min-height:54px;
+  display:flex;
+  align-items:center;
+  padding:10px 10px 10px 50px;
+  border-radius:8px;
+  background:rgba(255,255,255,.88);
+  font-size:13px;
+  font-weight:700;
+  line-height:1.15;
+}
+.group-addons span::before{
+  content:"+";
+  position:absolute;
+  left:10px;
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#ff5b45;
+  color:#fff;
+  font-size:20px;
+}
+.group-addons span:nth-child(3n+2)::before{ background:#f28b00; }
+.group-addons span:nth-child(3n)::before{ background:#1f9cdb; }
+.group-addons span:nth-child(4)::before{ background:#7b38c8; }
+.group-addons span:nth-child(5)::before{ background:#64a645; }
+.group-addons span:nth-child(8)::before{ background:#f42a70; }
+.group-addons span:nth-child(9)::before{ background:#06a9a9; }
+
+.info-table-wrap{ overflow-x:auto; border-radius:8px; background:rgba(255,255,255,.8); }
+.info-table{ width:100%; border-collapse:collapse; font-size:13px; line-height:1.25; }
+.info-table th,.info-table td{ padding:8px 10px; border-right:1px solid #d7dcef; border-bottom:1px solid #d7dcef; text-align:left; vertical-align:top; }
+.info-table thead th{ background:#dfe3f5; color:#23366f; text-align:center; }
+.info-table tbody th{ color:#102e80; }
+.info-note{ margin:8px 0 0!important; font-size:12px; }
+.info-strip{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:16px 24px;
+  border-radius:20px;
+  background:linear-gradient(90deg,#eaf8ff,#cdeeff);
+}
+.info-strip__icon{
+  flex:0 0 50px;
+  width:50px;
+  height:50px;
+  display:grid;
+  place-items:center;
+  border:5px solid #0976b9;
+  border-radius:50%;
+  color:#0976b9;
+  font:800 30px/1 Georgia,serif;
+}
+.info-strip p{ margin:0; color:#0c3971; font-size:14px; line-height:1.35; }
+.info-strip a{ color:#ff1e61; font-size:18px; font-weight:800; text-decoration:none; }
+
+/* Leczenie za granicą — cztery choroby, sześć etapów i Plus */
+.info-sheet--cancer{ padding-top:0; color:#082a55; background:#fff; }
+.cancer-quick{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  margin:0 0 44px;
+}
+.cancer-quick>div{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-height:82px;
+  padding:14px 18px;
+  border-radius:14px;
+  background:linear-gradient(145deg,#eef9ff,#fff);
+  box-shadow:0 8px 22px rgba(4,45,90,.05);
+}
+.cancer-quick span{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  flex:0 0 48px;
+  border-radius:14px;
+  background:#e3f5ff;
+  color:#0878bc;
+  font-size:26px;
+  font-weight:800;
+}
+.cancer-quick p{ margin:0; color:#214769; font-size:14px; line-height:1.35; }
+.cancer-heading{ margin:0 0 24px; }
+.cancer-heading h2{
+  margin-bottom:8px;
+  color:#062650;
+  font:700 clamp(28px,3vw,42px)/1.06 var(--f-naglowki);
+  letter-spacing:-.035em;
+}
+.cancer-heading p{ margin:0; color:#315879; font-size:17px; }
+.disease-grid{ display:grid; grid-template-columns:1fr; gap:14px; }
+.disease-card{
+  overflow:hidden;
+  border-radius:16px;
+  background:#f9fcff;
+  box-shadow:0 10px 28px rgba(4,45,90,.07);
+}
+.disease-card img{ width:100%; height:145px; display:block; object-fit:cover; }
+.disease-card>div{ min-height:250px; padding:18px 20px 22px; background:linear-gradient(145deg,#fff1f5,#fff); }
+.disease-card h3{ position:relative; margin:0 0 18px; padding-left:42px; color:#df174f; font-size:18px; }
+.disease-card h3::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:-7px;
+  width:32px;
+  height:32px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#ffe0e9;
+  color:#df174f;
+}
+.disease-card ul{ display:grid; gap:8px; margin:0; padding:0; list-style:none; }
+.disease-card li{ position:relative; padding-left:24px; color:#294d6e; font-size:14px; line-height:1.35; }
+.disease-card li::before{ content:"✓"; position:absolute; left:0; color:#df174f; font-weight:800; }
+.disease-card--heart>div{ background:linear-gradient(145deg,#eef7ff,#fff); }
+.disease-card--heart h3,.disease-card--heart li::before{ color:#1472db; }
+.disease-card--heart h3::before{ background:#dcebff; color:#1472db; }
+.disease-card--brain>div{ background:linear-gradient(145deg,#e9fbfa,#fff); }
+.disease-card--brain h3,.disease-card--brain li::before{ color:#079d9e; }
+.disease-card--brain h3::before{ background:#d6f5f3; color:#079d9e; }
+.disease-card--transplant>div{ background:linear-gradient(145deg,#f5efff,#fff); }
+.disease-card--transplant h3,.disease-card--transplant li::before{ color:#7d42b7; }
+.disease-card--transplant h3::before{ background:#eadfff; color:#7d42b7; }
+
+.cancer-heading--process{ margin-top:52px; }
+.cancer-process{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  margin:0 0 40px;
+  padding:0;
+  list-style:none;
+}
+.cancer-process li{
+  position:relative;
+  min-height:285px;
+  padding:28px 16px 20px;
+  border-radius:16px;
+  background:linear-gradient(180deg,#f0faff,#fff);
+  text-align:center;
+}
+.process-number{
+  position:absolute;
+  top:-12px;
+  left:18px;
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#0878bc;
+  color:#fff;
+  font-weight:800;
+}
+.process-icon{
+  width:74px;
+  height:74px;
+  display:grid;
+  place-items:center;
+  margin:0 auto 14px;
+  border-radius:50%;
+  background:#fff;
+  color:#0878bc;
+  font-size:35px;
+  box-shadow:0 6px 20px rgba(4,45,90,.07);
+}
+.cancer-process h3{ min-height:45px; margin:0 0 14px; color:#092d5d; font-size:16px; line-height:1.15; }
+.cancer-process p{ margin:0; color:#365a78; font-size:13px; line-height:1.45; }
+
+.cancer-plus{
+  position:relative;
+  min-height:360px;
+  display:grid;
+  align-items:center;
+  overflow:hidden;
+  margin-top:28px;
+  padding:34px 24px;
+  border-radius:18px;
+  background:#e9f7ff;
+}
+.cancer-plus>img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.cancer-plus::after{ content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(235,248,255,.98) 0 40%,rgba(235,248,255,.2) 72%); }
+.cancer-plus__copy,.cancer-plus>ul{ position:relative; z-index:1; }
+.cancer-plus__copy{ max-width:500px; }
+.cancer-plus__eyebrow{ margin-bottom:10px!important; color:#0b4f82!important; font-size:12px!important; font-weight:800; letter-spacing:.22em; text-transform:uppercase; }
+.cancer-plus h2{ margin:0 0 16px; color:#082a55; font:700 clamp(30px,3vw,44px)/1.02 var(--f-naglowki); letter-spacing:-.035em; }
+.cancer-plus__copy>p:last-child{ max-width:490px; margin:0; color:#305877; font-size:16px; line-height:1.45; }
+.cancer-plus>ul{
+  display:grid;
+  gap:10px;
+  margin:24px 0 0;
+  padding:18px;
+  border-radius:16px;
+  background:rgba(255,255,255,.94);
+  list-style:none;
+}
+.cancer-plus>ul li{ position:relative; padding-left:30px; color:#183b62; font-size:14px; }
+.cancer-plus>ul li::before{ content:"✓"; position:absolute; left:0; width:22px; height:22px; display:grid; place-items:center; border-radius:50%; background:#e7f5ff; color:#0878bc; font-weight:800; }
+.cancer-end{
+  position:relative;
+  display:grid;
+  gap:20px;
+  align-items:center;
+  margin-top:14px;
+  padding:30px 28px;
+  overflow:hidden;
+  border-radius:18px;
+  background:linear-gradient(110deg,#f5fbff,#e4f5ff);
+}
+.cancer-end::after{ content:"✈"; position:absolute; right:5%; top:5%; color:#0784c8; font-size:74px; opacity:.12; transform:rotate(-12deg); }
+.cancer-end>div,.cancer-end>.btn{ position:relative; z-index:1; }
+.cancer-end h2{ max-width:760px; margin:0 0 8px; color:#082a55; font:700 clamp(26px,3vw,38px)/1.05 var(--f-naglowki); }
+.cancer-end p:last-child{ margin:0; color:#315879; }
+.cancer-end>.btn{ justify-self:start; min-width:230px; }
+
+@media (min-width:640px){
+  .group-variants{ grid-template-columns:repeat(3,1fr); }
+  .group-addons{ grid-template-columns:repeat(3,1fr); }
+  .cancer-quick{ grid-template-columns:repeat(2,1fr); }
+  .disease-grid{ grid-template-columns:repeat(2,1fr); }
+  .cancer-process{ grid-template-columns:repeat(2,1fr); }
+  .cancer-plus>ul{ max-width:370px; }
+}
+
+@media (min-width:1024px){
+  .group-row--top{ grid-template-columns:1.04fr .94fr 1fr; }
+  .group-row--middle{ grid-template-columns:1.38fr 1fr; }
+  .group-row--bottom{ grid-template-columns:1fr 1fr; }
+  .group-row--top .group-panel{ min-height:315px; }
+  .group-panel--variants,.group-panel--addons{ min-height:290px; }
+  .group-variants{ grid-template-columns:repeat(6,1fr); }
+  .group-variants>div{ padding-inline:6px; }
+  .variant-company{ border-left:1px dashed #78b8b0; }
+  .cancer-quick{ grid-template-columns:repeat(4,1fr); }
+  .disease-grid{ grid-template-columns:repeat(4,1fr); }
+  .cancer-process{ grid-template-columns:repeat(6,1fr); gap:10px; }
+  .cancer-process li:not(:last-child)::after{ content:"→"; position:absolute; z-index:2; top:72px; right:-17px; color:#1697d8; font-size:25px; }
+  .cancer-plus{ grid-template-columns:1fr 360px; padding:42px 34px; }
+  .cancer-plus>ul{ grid-column:2; margin:0; }
+  .cancer-end{ grid-template-columns:1fr auto; padding:36px 48px; }
+  .cancer-end>.btn{ justify-self:end; }
+}
+
+@media (max-width:639px){
+  .info-sheet{ padding-top:8px; }
+  .group-panel{ padding:24px 18px; border-radius:17px; }
+  .group-panel h2{ font-size:24px; }
+  .group-variants strong{ min-height:0; }
+  .info-strip{ align-items:flex-start; padding:16px; }
+  .info-strip__icon{ flex-basis:38px; width:38px; height:38px; border-width:4px; font-size:22px; }
+  .info-table{ min-width:650px; }
+  .cancer-quick{ margin-bottom:34px; }
+  .disease-card>div{ min-height:0; }
+  .cancer-plus{ min-height:580px; align-items:end; padding-top:260px; }
+  .cancer-plus::after{ background:linear-gradient(180deg,rgba(235,248,255,.05) 0 32%,rgba(235,248,255,.98) 56%); }
+}
