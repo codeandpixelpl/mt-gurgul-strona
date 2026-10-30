@@ -1,0 +1,407 @@
+/* Dwie podstrony celowo nawiązują do infografik przekazanych przez klienta.
+   Reguły są ściśle ograniczone do klas body, żeby nie zmieniać reszty serwisu. */
+.page-info{
+  --info-navy:#06395f;
+  --info-navy-dark:#032b4c;
+  --info-blue:#0878bc;
+  --info-cyan:#9be9ff;
+  --info-pink:#ff2f6d;
+  --info-green:#139252;
+  --info-ink:#05264a;
+  background:#fff;
+  color:var(--info-ink);
+}
+.page-info main{ overflow:hidden; }
+.page-info main h1,.page-info main h2,.page-info main h3{ color:var(--info-ink); }
+.page-info .ph__label{ display:none; }
+.page-info .p-nad{ color:var(--info-blue); }
+.page-info .p-nad::before{ background:currentColor; }
+.page-info .p-sek{ padding-block:34px; }
+.page-info .p-sek .wrap{ position:relative; }
+.page-info .btn--1{ background:var(--info-navy); border-color:var(--info-navy); }
+.page-info .btn--1:hover{ background:var(--info-blue); border-color:var(--info-blue); }
+.page-info .btn--2{ border-color:rgba(6,57,95,.28); color:var(--info-navy); }
+.page-info .btn--2:hover{ border-color:var(--info-blue); color:var(--info-blue); }
+
+/* Hero wspólny dla obu infografik */
+.page-info .p-hero{ padding:14px 0 24px; }
+.page-info .p-hero__karta--tlo{
+  display:grid;
+  align-items:stretch;
+  min-height:500px;
+  border-radius:28px;
+  background:var(--info-navy);
+  box-shadow:0 20px 55px rgba(4,43,75,.16);
+}
+.page-info .p-hero__karta--tlo::before{ display:none; }
+.page-info .p-hero__tekst{
+  z-index:2;
+  align-self:center;
+  padding:44px 26px 38px;
+}
+.page-info .p-hero h1{
+  max-width:14ch;
+  margin-bottom:20px;
+  color:#fff;
+  font-size:clamp(40px,5.2vw,72px);
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+.page-info .p-hero__lead,
+.page-info .p-hero__lead:first-of-type{
+  max-width:590px;
+  color:rgba(255,255,255,.88);
+  font-weight:400;
+  line-height:1.58;
+}
+.page-info .p-hero .p-nad{ color:var(--info-cyan); }
+.page-info .p-hero .p-nad::before{ background:var(--info-cyan); }
+.page-info .p-hero .btn--1{ background:#fff; border-color:#fff; color:var(--info-navy); box-shadow:none; }
+.page-info .p-hero .btn--1:hover{ background:var(--info-cyan); border-color:var(--info-cyan); }
+.page-info .p-hero .btn--2{ border-color:rgba(255,255,255,.72); color:#fff; }
+.page-info .p-hero .btn--2:hover{ background:rgba(255,255,255,.1); border-color:#fff; }
+.page-info .p-hero__media{
+  min-height:330px;
+  background-position:center;
+  background-size:cover;
+}
+.page-info .p-hero__media img{
+  width:100%;
+  height:100%;
+  min-height:330px;
+  aspect-ratio:auto;
+  object-fit:cover;
+}
+
+/* Ubezpieczenie grupowe */
+.page-group .p-hero__karta--tlo{ background:linear-gradient(135deg,#06385e 0%,#064c79 100%); }
+.page-group .p-hero__media{
+  background:#16446c url("../img/kampania/15-grupowe-hero.jpg") 66% 50%/cover no-repeat;
+}
+.page-group .p-hero__media img{ object-position:66% 50%; }
+.page-group main>section:nth-of-type(2){ padding:0 0 34px; }
+.page-group main>section:nth-of-type(2) .p-karty{
+  gap:0;
+  overflow:hidden;
+  border-radius:22px;
+  background:var(--info-navy);
+  box-shadow:0 16px 42px rgba(4,43,75,.12);
+}
+.page-group main>section:nth-of-type(2) .p-karta{
+  min-height:0;
+  padding:28px 24px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:#fff;
+  box-shadow:none;
+}
+.page-group main>section:nth-of-type(2) .p-karta::before{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  margin:0 0 18px;
+  border-radius:16px;
+  background:rgba(155,233,255,.13);
+  color:var(--info-cyan);
+  font-size:15px;
+}
+.page-group main>section:nth-of-type(2) .p-karta h3{ color:#fff; }
+.page-group main>section:nth-of-type(2) .p-karta p{ margin:0; color:rgba(255,255,255,.75); }
+
+.page-group main>section:nth-of-type(3),
+.page-group main>section:nth-of-type(4),
+.page-group main>section:nth-of-type(5),
+.page-group main>section:nth-of-type(6),
+.page-group main>section:nth-of-type(7),
+.page-group main>section:nth-of-type(8){ padding-block:18px; }
+
+.page-group main>section:nth-of-type(3) .p-dwa>div,
+.page-group main>section:nth-of-type(3) .p-dwa__ramka,
+.page-group main>section:nth-of-type(4) .wrap,
+.page-group main>section:nth-of-type(5) .wrap,
+.page-group main>section:nth-of-type(6) .wrap,
+.page-group main>section:nth-of-type(7) .wrap,
+.page-group main>section:nth-of-type(8) .p-szkoda{
+  border:0;
+  border-radius:24px;
+  box-shadow:none;
+}
+.page-group main>section:nth-of-type(3) .p-dwa>div:first-child{ padding:30px 26px; background:#eaf8ff; }
+.page-group main>section:nth-of-type(3) .p-dwa__ramka{ padding:30px 26px; background:#fff8dc; }
+.page-group main>section:nth-of-type(3) .p-nad{ margin-bottom:12px; color:var(--info-blue); }
+.page-group main>section:nth-of-type(3) h2::before{ content:"1. "; color:var(--info-blue); }
+.page-group main>section:nth-of-type(3) .p-dwa__ramka h2::before{ content:"2. "; color:var(--info-green); }
+.page-group main>section:nth-of-type(3) .p-lista{ border:0; }
+.page-group main>section:nth-of-type(3) .p-lista li{ border-color:rgba(19,146,82,.15); }
+.page-group main>section:nth-of-type(3) .p-lista__ikona{ border-radius:50%; background:var(--info-green); color:#fff; }
+
+.page-group main>section:nth-of-type(4) .wrap{ padding:32px max(var(--pad),26px); background:#fff0f5; }
+.page-group main>section:nth-of-type(4) .sek__gl h2::before{ content:"3. "; color:#9b174c; }
+.page-group main>section:nth-of-type(4) .p-lista{ border-color:rgba(155,23,76,.18); }
+.page-group main>section:nth-of-type(4) .p-lista li{ border-color:rgba(155,23,76,.14); }
+.page-group main>section:nth-of-type(4) .p-lista__ikona{ border-radius:50%; background:var(--info-pink); color:#fff; }
+
+.page-group main>section:nth-of-type(5) .wrap{ padding:32px max(var(--pad),26px); background:#edfbf5; }
+.page-group main>section:nth-of-type(5) .sek__gl h2::before{ content:"4. "; color:var(--info-green); }
+.page-group main>section:nth-of-type(5) .p-karty{ gap:12px; }
+.page-group main>section:nth-of-type(5) .p-karta{
+  min-height:190px;
+  padding:24px 20px;
+  align-items:center;
+  text-align:center;
+  border:1px solid rgba(19,146,82,.1);
+  border-radius:20px;
+  background:rgba(255,255,255,.84);
+  box-shadow:none;
+}
+.page-group main>section:nth-of-type(5) .p-karta::before{
+  width:64px;
+  height:64px;
+  place-items:center;
+  margin-bottom:18px;
+  border:2px solid #d5f2e3;
+  border-radius:50%;
+  background:#fff;
+  color:var(--info-green);
+  font-size:16px;
+}
+.page-group main>section:nth-of-type(5) .p-karta h3{ padding:0; }
+.page-group main>section:nth-of-type(5) .p-karta p{ margin:0; }
+
+.page-group main>section:nth-of-type(6) .wrap{ padding:32px max(var(--pad),26px); background:#edf8ff; }
+.page-group main>section:nth-of-type(6) .sek__gl h2::before{ content:"5. "; color:var(--info-blue); }
+.page-group main>section:nth-of-type(6) .p-lista{ gap:10px; border:0; }
+.page-group main>section:nth-of-type(6) .p-lista li{
+  align-items:center;
+  min-height:72px;
+  padding:12px 14px;
+  border:1px solid rgba(8,120,188,.1);
+  border-radius:14px;
+  background:rgba(255,255,255,.9);
+  font-weight:600;
+}
+.page-group main>section:nth-of-type(6) .p-lista__ikona{
+  margin:0;
+  border-radius:50%;
+  background:var(--info-blue);
+  color:#fff;
+}
+
+.page-group main>section:nth-of-type(7) .wrap{ padding:32px max(var(--pad),26px); background:#f1f3ff; }
+.page-group main>section:nth-of-type(7) .sek__gl h2::before{ content:"6. "; color:#384a9f; }
+.page-group main>section:nth-of-type(7) .p-table-wrap{ border-color:rgba(56,74,159,.15); box-shadow:none; }
+.page-group main>section:nth-of-type(7) .p-table th{ background:#e1e5fb; color:#26357e; }
+
+.page-group main>section:nth-of-type(8) .p-szkoda{ background:#fff0f5; }
+.page-group main>section:nth-of-type(8) .p-szkoda__lewa{ padding:34px 28px; }
+.page-group main>section:nth-of-type(8) .p-szkoda__alarm{ background:#ffe3ec; }
+.page-group main>section:nth-of-type(8) h2::before{ content:"7. "; color:#9b174c; }
+.page-group main>section:nth-of-type(8) .p-szkoda__gl>.ikona{ color:var(--info-pink); }
+.page-group main>section:nth-of-type(9){ padding-top:34px; }
+.page-group main>section:nth-of-type(9) .kontakt-pas{
+  background:linear-gradient(135deg,#06395f,#075989);
+}
+
+/* Rak – leczenie za granicą */
+.page-cancer{ --info-navy:#042d5a; --info-blue:#0679be; --info-cyan:#86d9ff; background:#fbfdff; }
+.page-cancer .p-hero__karta--tlo{ background:linear-gradient(135deg,#f6fbff 0%,#dff4ff 100%); }
+.page-cancer .p-hero__tekst{ color:var(--info-navy); }
+.page-cancer .p-hero h1{ color:var(--info-navy); }
+.page-cancer .p-hero__lead,
+.page-cancer .p-hero__lead:first-of-type{ color:#294d6b; }
+.page-cancer .p-hero .p-nad{ color:var(--info-navy); }
+.page-cancer .p-hero .p-nad::before{ background:var(--info-blue); }
+.page-cancer .p-hero .btn--1{ background:var(--info-navy); border-color:var(--info-navy); color:#fff; }
+.page-cancer .p-hero .btn--1:hover{ background:var(--info-blue); border-color:var(--info-blue); }
+.page-cancer .p-hero .btn--2{ border-color:rgba(4,45,90,.32); color:var(--info-navy); }
+.page-cancer .p-hero .btn--2:hover{ background:#fff; border-color:var(--info-blue); color:var(--info-blue); }
+.page-cancer .p-hero__media{
+  background:#dff4ff url("../img/kampania/16-leczenie-zagranica-hero.jpg") 62% 50%/cover no-repeat;
+}
+.page-cancer .p-hero__media img{ object-position:62% 50%; }
+
+.page-cancer main>section:nth-of-type(2){ padding-top:28px; }
+.page-cancer main>section:nth-of-type(2) .sek__gl{ justify-content:flex-start; text-align:left; }
+.page-cancer main>section:nth-of-type(2) .sek__gl h2{ max-width:900px; }
+.page-cancer main>section:nth-of-type(2) .p-lista{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  border:0;
+}
+.page-cancer main>section:nth-of-type(2) .p-lista li{
+  min-height:150px;
+  padding:22px;
+  border:0;
+  border-radius:20px;
+  background:linear-gradient(150deg,#fff1f5,#fff);
+  box-shadow:0 12px 34px rgba(4,45,90,.06);
+  font-size:15px;
+}
+.page-cancer main>section:nth-of-type(2) .p-lista li:nth-child(2),
+.page-cancer main>section:nth-of-type(2) .p-lista li:nth-child(7){ background:linear-gradient(150deg,#eef7ff,#fff); }
+.page-cancer main>section:nth-of-type(2) .p-lista li:nth-child(3),
+.page-cancer main>section:nth-of-type(2) .p-lista li:nth-child(6){ background:linear-gradient(150deg,#e9fbfa,#fff); }
+.page-cancer main>section:nth-of-type(2) .p-lista li:nth-child(4),
+.page-cancer main>section:nth-of-type(2) .p-lista li:nth-child(5),
+.page-cancer main>section:nth-of-type(2) .p-lista li:nth-child(8),
+.page-cancer main>section:nth-of-type(2) .p-lista li:nth-child(9){ background:linear-gradient(150deg,#f5efff,#fff); }
+.page-cancer main>section:nth-of-type(2) .p-lista__ikona{
+  width:42px;
+  height:42px;
+  margin:0;
+  border-radius:50%;
+  background:var(--info-blue);
+  color:#fff;
+}
+
+.page-cancer main>section:nth-of-type(3){ padding-block:34px; background:#f4faff; }
+.page-cancer main>section:nth-of-type(3) .proces{ gap:26px; }
+.page-cancer main>section:nth-of-type(3) .proces__lewa h2{ max-width:780px; }
+.page-cancer main>section:nth-of-type(3) .proces__lewa h2::after{
+  content:"Kompleksowe wsparcie na każdym etapie – od pierwszego kontaktu aż po powrót do zdrowia.";
+  display:block;
+  max-width:760px;
+  margin-top:12px;
+  font:400 17px/1.55 var(--f-tekst);
+  letter-spacing:0;
+  color:#4d6b83;
+}
+.page-cancer .kroki{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+.page-cancer .kroki li{
+  position:relative;
+  min-height:240px;
+  padding:28px 22px 24px;
+  border:1px solid #d8eefb;
+  border-radius:20px;
+  background:linear-gradient(180deg,#fff,#eaf7ff);
+  box-shadow:none;
+  text-align:center;
+  color:#49647a;
+}
+.page-cancer .kroki li::before{
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  margin:0 auto 10px;
+  border-radius:50%;
+  background:var(--info-blue);
+  color:#fff;
+  font-size:16px;
+}
+.page-cancer .kroki li strong{ color:var(--info-navy); font-size:17px; }
+
+.page-cancer main>section:nth-of-type(4){ padding-block:34px; }
+.page-cancer .p-tf{
+  overflow:hidden;
+  gap:0;
+  border-radius:24px;
+  background:#eaf7ff;
+  box-shadow:0 16px 45px rgba(4,45,90,.09);
+}
+.page-cancer .p-tf__karta{ min-height:430px; border-radius:0; }
+.page-cancer .p-tf__karta::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(4,45,90,.84),rgba(4,45,90,.18) 70%);
+}
+.page-cancer .p-tf__gl{ z-index:1; max-width:480px; }
+.page-cancer .p-tf__gl .p-nad,
+.page-cancer .p-tf__gl h2{ color:#fff; }
+.page-cancer .p-tf__tresc{ padding:30px 26px; }
+.page-cancer .p-num li{ border-color:#cfe6f5; }
+.page-cancer .p-num__nr{ color:var(--info-blue); }
+
+.page-cancer main>section:nth-of-type(5) .p-szkoda{ border-color:#cfe6f5; }
+.page-cancer main>section:nth-of-type(5) .p-szkoda__alarm{ background:#eaf7ff; }
+.page-cancer main>section:nth-of-type(5) .p-szkoda__gl>.ikona,
+.page-cancer main>section:nth-of-type(5) .p-szkoda__alarm>.ikona{ color:var(--info-blue); }
+.page-cancer main>section:nth-of-type(7) .kontakt-pas{
+  background:linear-gradient(135deg,#042d5a,#0878bc);
+}
+
+@media (min-width:640px){
+  .page-cancer main>section:nth-of-type(2) .p-lista{ grid-template-columns:repeat(2,1fr); }
+  .page-group main>section:nth-of-type(5) .p-karty>.p-karta{ flex:0 0 calc(50% - 8px); }
+}
+
+@media (min-width:768px){
+  .page-info .p-hero__tekst{ padding:54px 44px 46px; }
+  .page-group main>section:nth-of-type(2) .p-karta{ flex:1 1 0; }
+  .page-group main>section:nth-of-type(2) .p-karta+.p-karta{ border-left:1px solid rgba(255,255,255,.13); }
+  .page-group main>section:nth-of-type(6) .p-lista{ grid-template-columns:repeat(3,1fr); }
+  .page-group main>section:nth-of-type(7) .wrap,
+  .page-group main>section:nth-of-type(6) .wrap,
+  .page-group main>section:nth-of-type(5) .wrap,
+  .page-group main>section:nth-of-type(4) .wrap{ padding:42px; }
+  .page-cancer .kroki{ grid-template-columns:repeat(2,1fr); }
+}
+
+@media (min-width:1024px){
+  .page-info .p-hero__karta--tlo{ grid-template-columns:minmax(0,1.05fr) minmax(440px,.95fr); }
+  .page-info .p-hero__tekst{ grid-column:1; grid-row:1; }
+  .page-info .p-hero__karta--tlo .p-hero__media{
+    position:relative;
+    inset:auto;
+    grid-column:2;
+    grid-row:1;
+    min-height:500px;
+  }
+  .page-info .p-hero__karta--tlo .p-hero__media img{
+    position:absolute;
+    inset:0;
+    min-height:500px;
+  }
+  .page-group .p-hero__media{ position:relative; }
+  .page-group .p-hero__media::before,
+  .page-cancer .p-hero__media::before{
+    content:"";
+    position:absolute;
+    z-index:1;
+    inset:0 auto 0 0;
+    width:18%;
+    background:linear-gradient(90deg,var(--info-navy),transparent);
+    pointer-events:none;
+  }
+  .page-cancer .p-hero__media::before{ background:linear-gradient(90deg,#eaf7ff,transparent); }
+  .page-group main>section:nth-of-type(3) .p-dwa{ gap:16px; }
+  .page-group main>section:nth-of-type(5) .p-karty>.p-karta{ flex:0 0 calc(33.333% - 11px); }
+  .page-cancer main>section:nth-of-type(2) .p-lista{ grid-template-columns:repeat(3,1fr); }
+  .page-cancer .kroki{ grid-template-columns:repeat(3,1fr); }
+  .page-cancer .p-tf{ grid-template-columns:minmax(0,1.08fr) minmax(400px,.92fr); }
+  .page-cancer .p-tf__tresc{ padding:38px 40px; }
+}
+
+@media (min-width:1240px){
+  .page-cancer main>section:nth-of-type(2) .p-lista{ grid-template-columns:repeat(4,1fr); }
+  .page-cancer .kroki{ grid-template-columns:repeat(6,1fr); }
+  .page-cancer .kroki li{ min-height:310px; padding-inline:16px; }
+}
+
+@media (max-width:767px){
+  .page-info .p-sek{ padding-block:28px; }
+  .page-info .p-hero__karta--tlo{ border-radius:20px; }
+  .page-info .p-hero__tekst{ order:1; }
+  .page-info .p-hero__media{ order:0; }
+  .page-info .p-hero__media img{ min-height:290px; aspect-ratio:4/3; }
+  .page-group .p-hero__media img{ object-position:70% 50%; }
+  .page-cancer .p-hero__media img{ object-position:67% 50%; }
+  .page-info .p-hero h1{ font-size:clamp(36px,12vw,52px); }
+  .page-group main>section:nth-of-type(2) .p-karta+.p-karta{ border-top:1px solid rgba(255,255,255,.13); }
+  .page-group main>section:nth-of-type(4) .wrap,
+  .page-group main>section:nth-of-type(5) .wrap,
+  .page-group main>section:nth-of-type(6) .wrap,
+  .page-group main>section:nth-of-type(7) .wrap{ margin-inline:var(--pad); padding-inline:22px; }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .page-info *{ scroll-behavior:auto!important; }
+}
