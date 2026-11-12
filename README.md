@@ -28,7 +28,8 @@ Potem otwórz w przeglądarce `http://localhost:8000/`.
 | `zycie-i-zdrowie.html` | Ubezpieczenia życia i zdrowia |
 | `leczenie-za-granica.html` | Ubezpieczenie Leczenie za granicą |
 | `ubezpieczenie-grupowe.html` | Grupowe ubezpieczenie dla firm i dla Ciebie |
-| `turystyczne.html` | Ubezpieczenia turystyczne i NNW |
+| `turystyczne.html` | Ubezpieczenia podróżne |
+| `nnw-szkolne.html` | NNW szkolne |
 | `rolnictwo.html` | Rolnictwo |
 | `finansowanie.html` | Leasing i finansowanie pojazdów |
 | `dla-firm.html` | Ubezpieczenia dla firm |
@@ -63,7 +64,7 @@ wersję po każdej zmianie.
 - Na stronie głównej komunikacja „finansowanie” została zmieniona na „leasing”.
 - W sekcji „Rozwiązania warte uwagi” karta „Leczenie za granicą” została zmieniona na „Rak” z hasłem „Dostęp do światowej medycyny”.
 - Karta „Posag” została zmieniona na „Przyszłość dla Twojego dziecka”.
-- Menu „Ubezpieczenia” zawiera dziewięć pozycji w kolejności zaakceptowanej przez klienta.
+- Menu „Ubezpieczenia” zawiera dziesięć pozycji w kolejności zaakceptowanej przez klienta.
 - Dodano pełną podstronę „Grupowe ubezpieczenie dla firm i dla Ciebie”.
 - GAP pozostaje osobną podstroną i został dodatkowo powiązany z ofertą leasingu.
 
@@ -125,10 +126,9 @@ Stan na 11 września 2026:
   i wskazówki dojazdu, treść zgody pod formularzem ustalona po analizie prawnej.
 - O nas: imiona, role i specjalizacje doradców, liczba osób w zespole, lista partnerów.
 - Pomoc: pliki dokumentów z opisami, formatami i datami weryfikacji.
-- Rolnictwo: treść podstrony. W projekcie treści jest tylko opis kafelka i pozycja w menu.
 - Samochód, Dom i mieszkanie, Życie i zdrowie: opis procesu.
 - GAP, Życie i zdrowie: sekcja „Na co zwrócić uwagę”.
-- Dla firm, Dom i mieszkanie, Turystyczne i NNW, Życie i zdrowie: najczęstsze pytania (FAQ).
+- Dla firm, Dom i mieszkanie, Podróże, Życie i zdrowie: najczęstsze pytania (FAQ).
 - Leczenie za granicą: świadczenie za dzień w szpitalu i zwrot kosztów leków, do potwierdzenia w OWU.
 - Finansowanie: logotypy instytucji finansujących, po potwierdzeniu współpracy i zasad używania znaków.
 - Ubezpieczenia: wybór produktów Generali ze sklepu partnerskiego do pokazania na stronie.
