@@ -101,6 +101,7 @@
 @media (min-width:680px){ .p-karty-oferty{ grid-template-columns:repeat(2,1fr); } }
 @media (min-width:1100px){ .p-karty-oferty{ grid-template-columns:repeat(3,1fr); gap:22px; }
   .p-karta-oferty__tresc{ padding:26px 28px 30px; }
+  .p-karty-oferty--nieparzyste > .p-karta-oferty:last-child{ grid-column:2; }
 }
 
 /* kolumny z numerami */
