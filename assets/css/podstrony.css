@@ -264,6 +264,9 @@ main .blok-brak{ max-width:none; min-height:64px; margin-top:12px; border-color:
   background:repeating-linear-gradient(135deg, transparent 0 12px, rgba(21,23,28,.025) 12px 13px); }
 main .blok-brak--maly{ min-height:30px; max-width:380px; border-radius:var(--r); }
 .p-brak h2{ margin-bottom:8px; }
+/* Robocze zaślepki pozostają w kodzie do późniejszego uzupełnienia, ale nie są publikowane. */
+.brak-tresci,
+.p-sek--brak{ display:none !important; }
 /* pasek logotypów partnerów (Finansowanie): białe kafle z szarym znakiem-zaślepką do podmiany na logo od klienta */
 .p-logo{ list-style:none; margin:24px 0 0; padding:0; display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
 @media (min-width:640px){ .p-logo{ grid-template-columns:repeat(3,1fr); } }
