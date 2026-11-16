@@ -32,6 +32,25 @@
   .p-hero__media img{ position:absolute; inset:0; height:100%; aspect-ratio:auto; }
 }
 
+/* Pełna plansza GAP przekazana przez klienta. Na wąskim ekranie można ją przesunąć poziomo,
+   dzięki czemu tekst pozostaje czytelny zamiast być agresywnie pomniejszany. */
+.p-sek--infografika-klienta{ background:#f7f7f9; }
+.infografika-klienta{
+  margin:0;
+  overflow-x:auto;
+  border-radius:var(--r-l);
+  background:#fff;
+  box-shadow:var(--cien);
+  -webkit-overflow-scrolling:touch;
+}
+.infografika-klienta img{
+  display:block;
+  width:100%;
+  min-width:760px;
+  height:auto;
+}
+@media (min-width:820px){ .infografika-klienta img{ min-width:0; } }
+
 /* hero ze zdjęciem z kampanii: poniżej 1280 px tekst nad zdjęciem, od 1280 px zdjęcie na całą kartę,
    tekst na czystej części kadru. Domyślnie z lewej jak na stronie głównej (kadry z postaciami po lewej
    są odbite), wariant --tekst-prawo dla kadru, którego nie odbijamy. Szerokość tekstu: --tekst-max ze strony. */

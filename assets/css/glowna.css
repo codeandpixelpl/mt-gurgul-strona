@@ -99,8 +99,10 @@ body.menu-otwarte .nav{ display:block; }
   .nav__rozwin::before{ width:5px; height:5px; border-width:1.5px; }
   .nav__pod{ position:absolute; top:100%; left:0; min-width:270px; padding:10px; background:#fff; border:1px solid var(--linia);
     border-radius:var(--r-l); box-shadow:var(--cien); }
+  .nav__pod--mala{ min-width:180px; }
   .nav__pod a{ border:0; border-radius:8px; padding:10px 12px; font-size:15px; }
   .nav__pod a:hover{ background:var(--karta); }
+  .nav__pod a[aria-current="page"]{ color:var(--czerwien); background:#FDEEF0; font-weight:600; }
   .nav__link.nav__rozwin{ padding:24px 20px 24px 0; color:#2A2D35; } /* daszek 13 px od słowa zamiast 9 */
   .nav__link.nav__rozwin:hover, .nav__item.is-open .nav__link.nav__rozwin{ color:var(--czerwien); }
   .nav__link.nav__rozwin::before{ right:2px; border-color:#8A8F9A; }
@@ -208,6 +210,41 @@ body.menu-otwarte .nav{ display:block; }
 @media (min-width:640px){ .kroki{ grid-template-columns:repeat(2,1fr); gap:20px; }
   .kroki li:last-child:nth-child(odd){ grid-column:1 / -1; } }
 @media (min-width:1024px){ .kroki li{ gap:18px; padding:36px 40px 40px; font-size:18px; } .kroki li::before{ font-size:42px; } }
+
+/* Kroki z osobnymi grafikami przygotowanymi na podstawie materiałów klienta. */
+.kroki--graficzne li{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-items:center;
+  gap:12px 16px;
+  overflow:hidden;
+  padding:0 18px 22px;
+}
+.kroki--graficzne li::before{ grid-column:1; grid-row:2; }
+.kroki--graficzne li>span{ grid-column:2; grid-row:2; }
+.kroki--graficzne img{
+  grid-column:1 / -1;
+  grid-row:1;
+  width:calc(100% + 36px);
+  max-width:none;
+  height:auto;
+  aspect-ratio:1;
+  margin:0 -18px 4px;
+  object-fit:contain;
+  background:linear-gradient(145deg,#fff,#f7f7f9);
+}
+.kroki--leasing img{ object-fit:cover; }
+@media (min-width:1024px){
+  .proces:has(.kroki--graficzne){ grid-template-columns:1fr; gap:38px; }
+  .proces:has(.kroki--graficzne) .proces__lewa{ display:flex; align-items:flex-end; justify-content:space-between; gap:28px; padding-top:0; }
+  .proces:has(.kroki--graficzne) .proces__lewa .przyciski{ flex:0 0 auto; margin-top:0; }
+  .kroki--graficzne{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .kroki--graficzne.kroki--5{ grid-template-columns:repeat(5,minmax(0,1fr)); }
+  .kroki--graficzne li,
+  .kroki--graficzne li:last-child:nth-child(odd){ grid-column:auto; padding:0 16px 22px; font-size:16px; }
+  .kroki--graficzne img{ width:calc(100% + 32px); margin-inline:-16px; }
+  .kroki--graficzne li::before{ font-size:31px; }
+}
 
 /* rozwiązania warte uwagi: 7 kart w pasie przewijanym w bok (runda 02, 2026-09-19). Dotyk: palcem, z przyciąganiem;
    od 900 px dochodzą strzałki przy nagłówku (main.js), widać trzy karty i skrawek czwartej. */
