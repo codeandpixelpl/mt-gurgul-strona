@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Stopka e-mail Gmail | MT Gurgul</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;padding:36px 20px;background:#f1f2f4;color:#15171c;font-family:Arial,sans-serif}
+  .panel{max-width:720px;margin:0 auto}
+  .instrukcja{margin:0 0 20px;padding:22px 24px;border-radius:14px;background:#fff;box-shadow:0 10px 30px rgba(21,23,28,.08)}
+  .instrukcja h1{margin:0 0 8px;font-size:22px}
+  .instrukcja p{margin:0 0 12px;color:#5c6170;font-size:14px;line-height:1.55}
+  .instrukcja ol{margin:0 0 18px;padding-left:20px;color:#5c6170;font-size:14px;line-height:1.55}
+  .kopiuj{display:inline-block;border:0;border-radius:10px;padding:12px 18px;background:#e31827;color:#fff;font-weight:700;cursor:pointer}
+  .status{display:inline-block;margin-left:12px;color:#5c6170;font-size:13px}
+  .podglad{overflow:auto;padding:28px;border-radius:14px;background:#fff;box-shadow:0 10px 30px rgba(21,23,28,.08)}
+  @media(max-width:600px){body{padding:18px 10px}.podglad{padding:14px}.instrukcja{padding:18px}}
+</style>
+</head>
+<body>
+<main class="panel">
+  <section class="instrukcja">
+    <h1>Stopka e-mail MT Gurgul</h1>
+    <p>Szablon jest przygotowany do wklejenia w ustawieniach podpisu Gmaila.</p>
+    <ol>
+      <li>Kliknij „Kopiuj stopkę”.</li>
+      <li>W Gmailu otwórz: Ustawienia → Zobacz wszystkie ustawienia → Ogólne → Podpis.</li>
+      <li>Utwórz nowy podpis, wklej zawartość i zapisz zmiany.</li>
+    </ol>
+    <button class="kopiuj" type="button" onclick="kopiujStopke()">Kopiuj stopkę do Gmaila</button>
+    <span class="status" id="status" role="status"></span>
+  </section>
+
+  <section class="podglad" aria-label="Podgląd stopki">
+    <div id="stopka-email">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;border-collapse:collapse;background:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#15171c">
+        <tr>
+          <td style="padding:0 0 16px 0">
+            <a href="https://mtgurgul.pl" target="_blank" style="text-decoration:none">
+              <img src="https://codeandpixelpl.github.io/mt-gurgul-strona/assets/img/mail/logo-mg-email.png" width="250" alt="Mateusz Gurgul Ubezpieczenia" style="display:block;width:250px;max-width:100%;height:auto;border:0">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 14px 0;border-bottom:3px solid #e31827">
+            <div style="font-size:20px;line-height:1.25;font-weight:700;color:#15171c">Mateusz Gurgul</div>
+            <div style="padding-top:3px;font-size:13px;line-height:1.45;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#e31827">Ubezpieczenia&nbsp;&nbsp;•&nbsp;&nbsp;Leasing</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:15px 0 4px 0">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse">
+              <tr>
+                <td width="50%" valign="top" style="width:50%;padding:0 14px 10px 0;font-size:12px;line-height:1.55;color:#5c6170">
+                  <strong style="font-size:13px;color:#15171c">Brzesko</strong><br>
+                  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=49.9684926%2C20.6121055" target="_blank" style="color:#5c6170;text-decoration:none">ul. Bartosza Głowackiego 49C<br>32-800 Brzesko</a><br>
+                  <a href="tel:+48728728442" style="color:#e31827;text-decoration:none;font-weight:700">728 728 442</a>
+                  <span style="color:#b4b8c0"> | </span>
+                  <a href="tel:+48146635000" style="color:#e31827;text-decoration:none;font-weight:700">14 66 35 000</a>
+                </td>
+                <td width="50%" valign="top" style="width:50%;padding:0 0 10px 14px;border-left:1px solid #ecedef;font-size:12px;line-height:1.55;color:#5c6170">
+                  <strong style="font-size:13px;color:#15171c">Szczurowa</strong><br>
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query=Rynek+1B+32-820+Szczurowa" target="_blank" style="color:#5c6170;text-decoration:none">Rynek 1B<br>32-820 Szczurowa</a><br>
+                  <a href="tel:+48728728977" style="color:#e31827;text-decoration:none;font-weight:700">728 728 977</a>
+                  <span style="color:#b4b8c0"> | </span>
+                  <a href="tel:+48146740022" style="color:#e31827;text-decoration:none;font-weight:700">14 674 00 22</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0 16px 0;font-size:13px;line-height:1.5">
+            <a href="https://mtgurgul.pl" target="_blank" style="color:#15171c;text-decoration:none;font-weight:700">mtgurgul.pl</a>
+            <span style="color:#b4b8c0">&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+            <a href="https://www.google.com/search?q=Agencja+Ubezpieczeniowa+MG+Mateusz+Gurgul+Brzesko&amp;ludocid=11643183396438565504#lrd=0x47162645a76604f3:0xa194e59c5f726280,3,,,," target="_blank" style="display:inline-block;padding:7px 11px;border-radius:7px;background:#e31827;color:#ffffff;text-decoration:none;font-size:12px;font-weight:700">Wystaw opinię w Google ★</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:13px 0 0 0;border-top:1px solid #ecedef">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;table-layout:fixed">
+              <tr>
+                <td width="16.66%" align="center" valign="top" style="width:16.66%;padding:0 2px;font-size:9px;line-height:1.25;color:#5c6170">
+                  <img src="https://codeandpixelpl.github.io/mt-gurgul-strona/assets/img/mail/ikona-samochod.png" width="32" height="32" alt="Samochód" style="display:block;margin:0 auto 5px;border:0;width:32px;height:32px"><span>Samochód</span>
+                </td>
+                <td width="16.66%" align="center" valign="top" style="width:16.66%;padding:0 2px;font-size:9px;line-height:1.25;color:#5c6170">
+                  <img src="https://codeandpixelpl.github.io/mt-gurgul-strona/assets/img/mail/ikona-dom.png" width="32" height="32" alt="Dom i mieszkanie" style="display:block;margin:0 auto 5px;border:0;width:32px;height:32px"><span>Dom i<br>mieszkanie</span>
+                </td>
+                <td width="16.66%" align="center" valign="top" style="width:16.66%;padding:0 2px;font-size:9px;line-height:1.25;color:#5c6170">
+                  <img src="https://codeandpixelpl.github.io/mt-gurgul-strona/assets/img/mail/ikona-zycie.png" width="32" height="32" alt="Życie" style="display:block;margin:0 auto 5px;border:0;width:32px;height:32px"><span>Życie</span>
+                </td>
+                <td width="16.66%" align="center" valign="top" style="width:16.66%;padding:0 2px;font-size:9px;line-height:1.25;color:#5c6170">
+                  <img src="https://codeandpixelpl.github.io/mt-gurgul-strona/assets/img/mail/ikona-firma.png" width="32" height="32" alt="Firma" style="display:block;margin:0 auto 5px;border:0;width:32px;height:32px"><span>Firma</span>
+                </td>
+                <td width="16.66%" align="center" valign="top" style="width:16.66%;padding:0 2px;font-size:9px;line-height:1.25;color:#5c6170">
+                  <img src="https://codeandpixelpl.github.io/mt-gurgul-strona/assets/img/mail/ikona-podroze.png" width="32" height="32" alt="Podróże" style="display:block;margin:0 auto 5px;border:0;width:32px;height:32px"><span>Podróże</span>
+                </td>
+                <td width="16.66%" align="center" valign="top" style="width:16.66%;padding:0 2px;font-size:9px;line-height:1.25;color:#5c6170">
+                  <img src="https://codeandpixelpl.github.io/mt-gurgul-strona/assets/img/mail/ikona-leasing.png" width="32" height="32" alt="Leasing" style="display:block;margin:0 auto 5px;border:0;width:32px;height:32px"><span>Leasing</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+</main>
+<script>
+function kopiujStopke(){
+  var stopka=document.getElementById('stopka-email');
+  var zakres=document.createRange();
+  zakres.selectNodeContents(stopka);
+  var zaznaczenie=window.getSelection();
+  zaznaczenie.removeAllRanges();
+  zaznaczenie.addRange(zakres);
+  var ok=false;
+  try{ok=document.execCommand('copy');}catch(e){ok=false;}
+  zaznaczenie.removeAllRanges();
+  document.getElementById('status').textContent=ok?'Stopka skopiowana. Teraz wklej ją w Gmailu.':'Zaznacz stopkę ręcznie i skopiuj ją skrótem klawiaturowym.';
+}
+</script>
+</body>
+</html>
